@@ -1,0 +1,97 @@
+@import './reset';
+
+.head {
+  text-align: center;
+  background-color: $clr-floral;
+
+  h3 {
+    color: $clr-orange;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    padding: 5rem 0 1.5rem 0;
+  }
+}
+
+.portfolio__card {
+  background-color: $clr-floral;
+  padding: 0 1rem 3rem 1rem;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.card__insight {
+  padding: 2rem 0;
+
+  h4 {
+    background-color: $clr-pale-orange;
+    border-radius: 5rem;
+    width: max-content;
+    padding: 0.3rem 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  h3 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $clr-dark;
+  }
+
+  p {
+    padding-bottom: 1rem;
+  }
+
+  button {
+    @include button;
+  }
+}
+
+
+
+
+@media screen  and (min-width: 768px) {
+  .card__insight {
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+    padding: 1rem 0;
+
+
+    img {
+      width: 46.5%;
+    }
+  }
+
+  .card__insight:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  .portfolio__card {
+    padding: 0 3rem;
+  }
+}
+
+@media screen  and (min-width: 1000px) {
+  .portfolio__card {
+    padding: 0 5rem;
+  }
+
+  .head {
+    h2 {
+
+      padding: 5rem 0 3rem 0;
+    }
+  }
+}
+
+
+

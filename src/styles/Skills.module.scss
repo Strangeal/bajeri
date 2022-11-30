@@ -1,0 +1,103 @@
+@import './reset';
+
+.head {
+    text-align: center;
+    padding: 2.3rem 0;
+    font-size: 2.5rem;
+}
+
+.my__skills {
+  padding: 0 1rem;
+  
+
+  img {
+    width: 100%;
+    position: relative;
+    top: 8px;
+    // z-index: -1;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  margin-right: 5rem;
+  
+  .skills {
+    @include classic;
+    padding: 0.4rem;
+    align-items: center;
+    word-break: break-all;
+    word-spacing: 15px;
+
+    svg {
+      background-color: $clr-white;
+      width: 50px;
+      height: 50px;
+      padding: 0.2rem;
+      border: 2px solid $clr-dark;
+    }
+
+    h4 {
+      margin-left: 1rem;
+      
+    }
+  }
+}
+
+.skills__action {
+  @include actions;
+}
+
+@media screen  and (min-width: 768px) {
+  .head{
+    text-align: left;
+    position: relative;
+    top: 70px;
+    font-size: 3rem;
+    padding-left: 3rem;
+  }
+
+  .my__skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    align-items: flex-start;
+    padding: 0 3rem;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .content {
+    padding-top: 5rem;
+    .skills {
+      word-break: normal;
+      word-spacing: normal;
+    }
+  }
+
+  .skills__action {
+    @include responsiveActions;
+    padding: 3rem;
+  }
+  
+}
+
+  @media screen  and (min-width: 1000px) {
+    .head{
+      padding-left: 5rem;
+    }
+    .my__skills {
+      padding: 0 5rem;
+    }
+
+    .skills__action {
+      @include responsiveActions;
+      padding: 3rem 5rem;
+    }
+  }

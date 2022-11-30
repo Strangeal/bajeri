@@ -1,0 +1,184 @@
+@import './reset';
+
+.Home__container {
+  img{
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  // .head_content h3 {
+  //   color: ;
+  //   font-family: monospace;
+  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  //   border-right: .15em solid orange; /* The typwriter cursor */
+  //   white-space: nowrap; /* Keeps the content on a single line */
+  //   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  //   letter-spacing: .15em; /* Adjust as needed */
+  //   animation: 
+  //     typing 3.5s steps(30, end),
+  //     blink-caret .5s step-end infinite;
+  // }
+
+  // .bg__shape{
+  //   @include backgroundShape;
+  // }
+
+  .Head {
+    background-color: rgb(255,249,238);
+    padding: 5rem 1rem 0 1rem;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      padding-top: 2rem;
+    }
+    
+    h3 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      padding: 1.5rem 0;
+
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+          typing 3.5s steps(30, start),
+          blink-caret .5s step-start infinite;
+
+          /* The typing effect */
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: orange }
+        }
+      
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 1rem;
+      padding-bottom: 1.5rem;
+    }
+
+    button {
+      @include button;
+    }
+  }
+}
+
+.Introduction {
+  background-color: $clr-white;
+  padding: 0 1rem;
+  h2 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+}
+
+.My__insight {
+  display: flex;
+  justify-content:flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+
+  h3 {
+    color: $clr-orange;
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+    padding-bottom: 1.5rem;
+  }
+
+  button {
+    @include button;
+  }
+
+  .Clients button{
+    background-color: $clr-dark;
+    box-shadow: 5px 5px 0 1px $clr-orange;
+
+    &:hover {
+      background-color: $clr-orange;
+      box-shadow: 5px 5px 0 1px $clr-dark;
+    }
+  }
+}
+
+.home__action {
+  @include actions;
+}
+
+@media screen  and (min-width: 768px) {
+  .Home__container {
+    img {
+      width: 48%;
+    }
+
+  .Head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    text-align: left;
+
+    h1 {
+      font-size: 1.1rem;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+  }
+
+  .Introduction {
+    display: flex;
+    align-items: center;
+    padding: 2rem 3rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .intro {
+      margin-left: 4rem;
+    }
+  }
+
+  .home__action {
+    @include responsiveActions;
+    padding: 3rem;
+  }
+}
+
+@media screen  and (min-width: 1000px) {
+  .Home__container {
+  .Head {
+    padding: 3rem 5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+  .Introduction {
+    padding: 2rem 5rem;
+  }
+
+  .home__action {
+    padding: 3rem 5rem;
+  }
+}

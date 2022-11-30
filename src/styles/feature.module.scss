@@ -1,0 +1,63 @@
+@import './reset';
+
+.Feature__container{
+  padding: 0 1rem 3rem 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .Head {
+    text-align: center;
+    padding: 2rem 0;
+
+    h3 {
+      color: $clr-orange;
+    }
+    h2 {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+
+  .Feature__card {
+    @include classic;
+    @include gridFlow;
+}
+
+@media screen  and (min-width: 768px) {
+  .Feature__container {
+    background-position: center center;
+    padding: 3rem;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+
+  .Feature__card {
+    padding: 2.5rem;
+  }
+}
+  
+
+  .content{
+
+    h3 {
+      font-size: 1.4rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+@media screen  and (min-width: 1000px) {
+  .Feature__container {
+    padding: 5rem;
+}
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+}
+

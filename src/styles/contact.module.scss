@@ -1,0 +1,107 @@
+@import './reset';
+
+.contact__container {
+  background-color: $clr-dark;
+  padding:  1rem;
+}
+
+.get__in__touch {
+  background-color: $clr-white;
+  padding: 1.5rem 1rem;
+  width: 100%;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.form__container {
+  padding: 1rem 0;
+
+  .form__group {
+    display:flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+
+    label {
+      padding: 0.3rem 0;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      outline: none;
+      border: 1px solid #000;
+      font-family: 'Nunito', sans-serif;
+    }
+  }
+
+  button {
+    @include button;
+    @include yelloButton;
+    margin: 1rem 0;
+  }
+}
+
+.contact__me {
+  color: $clr-white;
+  padding: 2.5rem 0;
+  width: 80%;
+
+  img{
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .reach__us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    span{
+      padding: 0.5rem;
+    svg {
+      width: 28px;
+      height: 28px;
+      color:#000;
+    }
+  }
+
+    h3 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: #d3d3d3;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen  and (min-width: 768px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding:  3rem;
+
+    img{
+      width: 80%;
+    }
+  }
+
+  .get__in__touch {
+    padding: 2rem;
+  }
+  
+  .contact__me {
+    padding-top: 0;
+  }
+}
+
+
+@media screen  and (min-width: 1000px) {
+  .contact__container {
+    padding:  5rem;}
+}

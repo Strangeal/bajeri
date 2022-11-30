@@ -1,0 +1,130 @@
+@import './reset';
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $clr-white;
+  height: 70px;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav__brand a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $clr-dark;
+  display: flex;
+  align-items: center;
+  svg{
+    color: $clr-orange;
+  }
+
+}
+
+.nav__menu {
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $clr-white;
+  transition: 0.4s;
+}
+
+.nav__item{
+  padding: 1rem 0;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid #d3d3d3;
+  text-transform: uppercase;
+
+  
+}
+
+.nav__item a{
+  color: $clr-dark;
+  
+.active {
+    color: $clr-orange;
+  }
+  
+}
+
+.nav__item a:hover {
+  color: $clr-orange;
+  transition: all 0.8s ease;
+}
+
+.nav__menu.active {
+  left: 0;
+}
+.hamburger {
+  display: flex;
+}
+
+.btn {
+  display: none;
+}
+
+
+
+
+
+
+
+
+@media screen  and (min-width: 768px) {
+  .navbar {
+    padding: 0 3rem;
+  }
+  
+  .nav__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    position: static;
+  }
+
+  .nav__item{
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+  }
+
+    .hamburger {
+      display: none;
+    }
+    
+    .navbar .btn {
+      display: flex;
+      width: 200px;
+      font-size: 0.8rem;
+      @include button;
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media screen  and (min-width: 1000px) {
+    .navbar {
+      padding: 0 5rem;
+    }
+
+    .nav__item{
+      padding: 0.5rem;
+      margin: 0.8rem;
+      color: $clr-dark;
+      font-size: 0.9rem;
+    }
+    .btn {
+      width: 190px;
+      text-align: center;
+    }
+  }
