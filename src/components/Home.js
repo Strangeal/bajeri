@@ -5,9 +5,8 @@ import aboutBannner from "../img/aboutme-banner.png";
 
 const Home = () => {
   return (
-    <main>
       <section className={styles.Home__container}>
-        {/* <div className="bg__shape"></div> */}
+        
         <div className={styles.Head}>
           <div className={styles.head__content}>
             <h1>👋, my name is Bajeri</h1>
@@ -51,10 +50,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
-      
-      </section>
-    </main>
   );
 };
 

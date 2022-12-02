@@ -12,7 +12,8 @@ const Navbar = () => {
     setBurger(!burger)
   }
   return (
-    <header>
+    <>
+    <div className={styles.bg__shape}></div>
       <nav className={styles.navbar}>
         <div className={styles.nav__brand}>
           <Link to="/">
@@ -46,7 +47,7 @@ const Navbar = () => {
         </div>
           <button className={styles.btn}>contact now</button>
       </nav>
-    </header>
+      </>
   )
 }
 

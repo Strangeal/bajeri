@@ -4,39 +4,34 @@
   img{
     width: 100%;
     padding: 3rem 0;
+    position: relative;
+    z-index: 2;
   }
 
-  // .head_content h3 {
-  //   color: ;
-  //   font-family: monospace;
-  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  //   border-right: .15em solid orange; /* The typwriter cursor */
-  //   white-space: nowrap; /* Keeps the content on a single line */
-  //   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  //   letter-spacing: .15em; /* Adjust as needed */
-  //   animation: 
-  //     typing 3.5s steps(30, end),
-  //     blink-caret .5s step-end infinite;
-  // }
-
-  // .bg__shape{
-  //   @include backgroundShape;
-  // }
+  .bg__shape{
+    @include backgroundShape;
+  }
 
   .Head {
     background-color: rgb(255,249,238);
     padding: 5rem 1rem 0 1rem;
     text-align: center;
+    
     h1 {
       text-transform: uppercase;
       font-size: 1rem;
       padding-top: 2rem;
+      position: relative;
+    z-index: 2;
     }
     
     h3 {
       font-size: 1.8rem;
       text-transform: uppercase;
       padding: 1.5rem 0;
+      width: max-content;
+      position: relative;
+    z-index: 2;
 
         overflow: hidden;
         border-right: .15em solid orange;
@@ -64,10 +59,14 @@
       font-weight: 500;
       font-size: 1rem;
       padding-bottom: 1.5rem;
+      position: relative;
+    z-index: 2;
     }
 
     button {
       @include button;
+      position: relative;
+    z-index: 2;
     }
   }
 }

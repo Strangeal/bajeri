@@ -1,0 +1,36 @@
+@import './reset';
+
+.Credit {
+  background-color: $clr-dark;
+  border-top: 1px solid #d3d3d3;
+  text-align: center;
+  padding: 1.2rem 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #d3d3d3;
+    margin: 0.8rem 0.4rem;
+
+  }
+
+  p {
+    color: #d3d3d3;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Credit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Credit {
+    padding: 0.8rem 5rem;
+  }
+}

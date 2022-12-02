@@ -1,7 +1,7 @@
 // variables
 $clr-orange: #ff651b;
 $clr-light-orange: #fee3af;
-$clr-white: #fff;  
+$clr-white: #fff;
 $clr-dark: #373737;
 $clr-yellow: #FEC348;
 $clr-floral: #FFF9EE;
@@ -18,7 +18,7 @@ $clr-bg: rgba(254, 196, 72, 0.1);
   text-transform: uppercase;
   transition: 0.5s ease;
 
-  &:hover{
+  &:hover {
     background-color: $clr-dark;
     box-shadow: 5px 5px 0 1px $clr-orange;
 
@@ -32,53 +32,56 @@ $clr-bg: rgba(254, 196, 72, 0.1);
   font-weight: 700;
   // margin: 1rem;
 
-  &:hover{
+  &:hover {
     background-color: $clr-orange;
     box-shadow: 5px 5px 0 1px $clr-yellow;
     color: $clr-white;
   }
-  
+
 }
 
 @mixin backgroundShape {
-  background-color: $clr-light-orange;
-    width:220px;
-    height: 400px;
-    position: fixed;
-    left: 160px;
-    top: -40px;
-    z-index: 0;
-    border-radius: 3rem;
-    transform: rotate(45deg);
+  background-color: $clr-pale-orange;
+  display: flex;
+  width: 65%;
+  height: 90%;
+  position: absolute;
+  left: 240px;
+  top: -280px;
+  z-index: 1;
+  border-radius: 3rem;
+  transform: rotate(45deg);
 }
 
 @mixin classic {
-    border: 2px solid $clr-dark;
-    display: flex;
-    transition: 0.5s ease;
+  border: 2px solid $clr-dark;
+  display: flex;
+  transition: 0.5s ease;
 
-    &:hover {
-      box-shadow: 5px 5px 0 1px $clr-dark;
-    }
+  &:hover {
+    box-shadow: 5px 5px 0 1px $clr-dark;
+  }
 }
 
 @mixin gridFlow {
   padding: 2rem;
   margin: 1rem 0;
 
-svg {
-  width: 80px;
-  height: 80px;
-  background-color: $clr-white;
-  padding: 0.5rem;
-  border: 2px solid #000;
-}
-.content {
-  padding-left: 1rem;
-}
-.h3 {
-  padding-bottom: 0.5rem;
-}
+  svg {
+    width: 80px;
+    height: 80px;
+    background-color: $clr-white;
+    padding: 0.5rem;
+    border: 2px solid #000;
+  }
+
+  .content {
+    padding-left: 1rem;
+  }
+
+  .h3 {
+    padding-bottom: 0.5rem;
+  }
 }
 
 @mixin actions {
@@ -86,7 +89,7 @@ svg {
   color: $clr-white;
   text-align: center;
   padding: 3rem;
-  
+
 
   h2 {
     font-size: 1.3rem;
@@ -104,7 +107,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   h2 {
     font-size: 2.3rem;
     width: auto;
